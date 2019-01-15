@@ -29,12 +29,14 @@ class Simon
   end
 
   def game_setup
+    print 7.chr
     print ">> Welcome"
     sleep(1)
+    print 7.chr
     print " to "
     sleep(1)
-    print "SIMON!".colorize(:yellow)
-    puts "(TM)"
+    print 7.chr
+    puts "SIMON!".colorize(:yellow) + "(TM)"
     sleep(1)
     puts ">> The electronic game of memory skill."
     puts ">> Would you like to see" + " the rules?".colorize(:red) + " Y/N"
@@ -95,12 +97,16 @@ class Simon
       input_sequence.each_with_index do |color, idx|
         if color == "B"
           print ">> Round #{sequence_length}: " + "BLUE".red.on_yellow
+          print 7.chr
         elsif color == "R"
           print ">> Round #{sequence_length}: " + "RED".green.on_blue
+          print 7.chr
         elsif color == "G"
           print ">> Round #{sequence_length}: " + "GREEN".yellow.on_red
+          print 7.chr
         else
           print ">> Round #{sequence_length}: " + "YELLOW".blue.on_green
+          print 7.chr
         end
         sleep(1)
         system("clear")
@@ -116,6 +122,7 @@ class Simon
       print ">> Round #{sequence_length}: "
       sleep(1)  
       input_sequence.each do |color|
+        print 7.chr
         if color == "B"
           print "BLUE ".colorize(:blue)
         elsif color == "R"
@@ -159,7 +166,7 @@ class Simon
   def round_success_message
     puts ">> Nice Job - You passed!"
     sleep(1)
-    puts ">> Prepare for the next round."
+    puts ">> Prepare for round #{sequence_length}."
     sleep(1)
   end
 
