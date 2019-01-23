@@ -1,0 +1,176 @@
+  [1m[35m (426.6ms)[0m  [1m[35mCREATE DATABASE "project_name_development" ENCODING = 'utf8'[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE DATABASE "db/test"."sqlite3" ENCODING = 'utf8'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE DATABASE "project_name_development" ENCODING = 'utf8'[0m
+  ↳ /Users/jameshawkins/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE DATABASE "db/test"."sqlite3" ENCODING = 'utf8'[0m
+  ↳ /Users/jameshawkins/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE DATABASE "project_name_development" ENCODING = 'utf8'[0m
+  ↳ /Users/jameshawkins/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE DATABASE "db/test"."project_name_development" ENCODING = 'utf8'[0m
+  ↳ /Users/jameshawkins/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (10.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/jameshawkins/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ /Users/jameshawkins/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4357788865591779555)[0m
+  ↳ /Users/jameshawkins/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jameshawkins/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to CreatePeopleTable (20190123042336)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jameshawkins/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "people" ("id" bigserial primary key, "name" character varying NOT NULL, "house_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190123042336_create_people_table.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190123042336"]]
+  ↳ /Users/jameshawkins/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jameshawkins/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to CreateHousesTable (20190123042431)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jameshawkins/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "houses" ("id" bigserial primary key)[0m
+  ↳ db/migrate/20190123042431_create_houses_table.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190123042431"]]
+  ↳ /Users/jameshawkins/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jameshawkins/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/jameshawkins/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jameshawkins/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-01-23 04:29:45.118867"], ["updated_at", "2019-01-23 04:29:45.118867"]]
+  ↳ /Users/jameshawkins/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jameshawkins/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4357788865591779555)[0m
+  ↳ /Users/jameshawkins/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jameshawkins/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4357788865591779555)[0m
+  ↳ /Users/jameshawkins/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jameshawkins/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to AddHouseIdToHouse (20190123043432)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jameshawkins/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (7.0ms)[0m  [1m[35mALTER TABLE "houses" ADD "address" character varying[0m
+  ↳ db/migrate/20190123043432_add_house_id_to_house.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190123043432"]]
+  ↳ /Users/jameshawkins/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jameshawkins/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/jameshawkins/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jameshawkins/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jameshawkins/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4357788865591779555)[0m
+  ↳ /Users/jameshawkins/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jameshawkins/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4357788865591779555)[0m
+  ↳ /Users/jameshawkins/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jameshawkins/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to AddTimestampsToHouse (20190123043646)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jameshawkins/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/jameshawkins/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4357788865591779555)[0m
+  ↳ /Users/jameshawkins/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4357788865591779555)[0m
+  ↳ /Users/jameshawkins/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jameshawkins/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to AddTimestampsToHouse (20190123043646)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jameshawkins/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/jameshawkins/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4357788865591779555)[0m
+  ↳ /Users/jameshawkins/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4357788865591779555)[0m
+  ↳ /Users/jameshawkins/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jameshawkins/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to AddTimestampsToHouse (20190123043646)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jameshawkins/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "houses" ADD "name" character varying[0m
+  ↳ db/migrate/20190123043646_add_timestamps_to_house.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190123043646"]]
+  ↳ /Users/jameshawkins/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jameshawkins/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/jameshawkins/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jameshawkins/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jameshawkins/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4357788865591779555)[0m
+  ↳ /Users/jameshawkins/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jameshawkins/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jameshawkins/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jameshawkins/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jameshawkins/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mHouse Create (0.9ms)[0m  [1m[32mINSERT INTO "houses" ("address") VALUES ($1) RETURNING "id"[0m  [["address", "Newport Beach, California"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mHouse Create (0.3ms)[0m  [1m[32mINSERT INTO "houses" ("address") VALUES ($1) RETURNING "id"[0m  [["address", "Lake Tahoe, California"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mPerson Create (0.8ms)[0m  [1m[32mINSERT INTO "people" ("name", "house_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Jessica"], ["house_id", 2], ["created_at", "2019-01-23 04:44:25.918175"], ["updated_at", "2019-01-23 04:44:25.918175"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mPerson Create (0.3ms)[0m  [1m[32mINSERT INTO "people" ("name", "house_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Jan"], ["house_id", 1], ["created_at", "2019-01-23 04:44:25.921095"], ["updated_at", "2019-01-23 04:44:25.921095"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPerson Create (0.3ms)[0m  [1m[32mINSERT INTO "people" ("name", "house_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Jim"], ["house_id", 1], ["created_at", "2019-01-23 04:44:25.923210"], ["updated_at", "2019-01-23 04:44:25.923210"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPerson Load (0.7ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  [1m[36mHouse Load (0.7ms)[0m  [1m[34mSELECT "houses".* FROM "houses"[0m
+  [1m[36mHouse Load (0.3ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mHouse Load (0.4ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPerson Load (0.2ms)[0m  [1m[34mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPerson Load (0.2ms)[0m  [1m[34mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPerson Load (0.3ms)[0m  [1m[34mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mHouse Load (0.3ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHouse Update (0.8ms)[0m  [1m[33mUPDATE "houses" SET "name" = $1 WHERE "houses"."id" = $2[0m  [["name", "Tahoe House"], ["id", 2]]
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mHouse Load (0.6ms)[0m  [1m[34mSELECT "houses".* FROM "houses"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHouse Update (0.5ms)[0m  [1m[33mUPDATE "houses" SET "name" = $1 WHERE "houses"."id" = $2[0m  [["name", "Newport Beach House"], ["id", 1]]
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPerson Load (0.6ms)[0m  [1m[34mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPerson Load (0.3ms)[0m  [1m[34mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mHouse Load (0.2ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mHouse Load (0.3ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" ORDER BY "houses"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mHouse Load (0.4ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" ORDER BY "houses"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mHouse Load (0.2ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" ORDER BY "houses"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPerson Load (0.3ms)[0m  [1m[34mSELECT "people".* FROM "people" WHERE "people"."house_id" = $1[0m  [["house_id", 1]]
