@@ -1,0 +1,26 @@
+<h1> <%= @cat.name %> </h1>
+<h2> Skills: </h2>
+<ul>
+    <li><%= @cat.skill %>
+</ul>
+ 
+<h2> Toys </h2>
+<ul>
+    <% @cat.toys.each do |toy| %>
+        <li> 
+            <a href="<%= toy_url(toy.id) %>"><%= toy.name %> </a>
+        </li>
+    <% end %>
+</ul>
+
+<h2> Other Useful Links </h2>
+<ul>
+    <li> <a href="<%= new_cat_toy_url(@cat) %>">Get me a new toy!</a></li>
+    <li> <a href="<%= edit_cat_url(@cat) %>">Edit <%= @cat.name %>!</a></li>
+    <li> <a href="<%= cats_url %>">Index</a> </li>
+</ul>
+
+<h2> Details </h2>
+<pre>
+    <%= @cat.to_json %>
+</pre>
