@@ -43,3 +43,9 @@ Migrating to CreateUsers (20190130052723)
   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
   [1m[36mUser Create (1.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "James"], ["password_digest", "$2a$10$cFPOZDcj8ONUeXW/vetIZODR.kM.yaJK6fTeakX8ISgdKve1VgRYe"], ["session_token", "JjI461jtSMm1qW-ZMWuyAQ"], ["created_at", "2019-01-30 05:59:47.684432"], ["updated_at", "2019-01-30 05:59:47.684432"]]
   [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (47.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "James"], ["password_digest", "$2a$10$OLmZoaxHFpqppBquGGScHepIjrEtXb7KC97uwQb5RvIVEmwnqh/uO"], ["session_token", "1F0Lr70UmyjVSX1hnfr04A"], ["created_at", "2019-01-30 16:45:02.750142"], ["updated_at", "2019-01-30 16:45:02.750142"]]
+  [1m[35m (41.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "James"], ["password_digest", "$2a$10$P1md4gU9jLn8Vdmb18YRne2AdovmfdkjCwDiM/i9BePMnNkkanQMy"], ["session_token", "9kiCwZdT2e_gZRhqV-REnQ"], ["created_at", "2019-01-30 16:45:24.559962"], ["updated_at", "2019-01-30 16:45:24.559962"]]
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
