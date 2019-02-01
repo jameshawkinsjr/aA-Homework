@@ -1,0 +1,11 @@
+<form id="login" action="<%= bands_url %>" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= session[:authenticity_token] %>">
+    <label for="band_name">
+        Band Name 
+        <br/>
+        <input type="text" name="band[name]"> 
+    </label>
+    <br/>
+    <br/>
+    <input type="Submit" value="Create Band">    
+</form>

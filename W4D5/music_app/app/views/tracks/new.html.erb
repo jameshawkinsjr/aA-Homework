@@ -1,0 +1,31 @@
+<form id="login" action="<%= tracks_url %>" method="post">
+        <input type="hidden" name="authenticity_token" value="<%= session[:authenticity_token] %>">
+        <label for="album_id">
+                Made By: 
+                <select name="track[album_id]">
+                        <option disabled selected> Choose an album </option>
+                    <% Album.all.each do |album| %>
+                        <option name="track[album_id]" value="<%= album.id %>"><%= album.title %></option>
+                    <% end %>
+                </select>
+            </label>
+            <br/>
+        <label for="title">
+            Track Name: 
+            <input type="text" name="track[title]"> 
+        </label>
+        <br/>
+        <label for="ord">
+            Track Order: 
+            <input type="text" name="track[ord]"> 
+        </label>
+        <br/>
+        <label for="regular_bonus">
+            Recorded: 
+            <input type="radio" name="track[regular]" value="true">Regular</input>
+            <input type="radio" name="track[regular]" value="false"> Bonus</input>
+        </label>
+        <br/>
+        <br/>
+        <input type="Submit" value="Add track">    
+</form>

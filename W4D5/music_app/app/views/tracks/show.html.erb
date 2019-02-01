@@ -1,0 +1,19 @@
+<h1><%= @track.title %></h1>
+<br/>
+<div id="login">
+Band: <%= Band.find_by(id: params[:band_id]).name %>
+<br/>
+Title: <%= @track.title %>
+<br/>
+Year Recorded: <%= @track.year %>
+<br/>
+track Type: <%= @track.studio ? "Studio" : "Live" %>
+<br/>
+</div>
+<br/>
+
+<form action="<%= track_url %>" method="post">
+        <input type="hidden" name="authenticity_token" value="<%= session[:authenticity_token] %>">
+        <input type="hidden" name="_method" value="delete">
+        <input type="submit" value="Delete This track">
+</form>

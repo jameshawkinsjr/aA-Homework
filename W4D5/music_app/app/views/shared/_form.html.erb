@@ -1,0 +1,27 @@
+<% if form == 'login' %>
+    <% action = session_url %>
+    <% button_text = "Sign In!" %>
+<% else %> 
+    <% action = users_url %>
+    <% button_text = "Sign Up!" %>
+<% end %>
+
+    <form id="login" action="<%= action %>" method="post">
+        <input type="hidden" name="authenticity_token" value="<%= session[:authenticity_token] %>">
+        <label for="email">
+            Email 
+            <br/>
+            <input type="text" name="user[email]"> 
+        </label>
+        <br/>
+        <br/>
+        <label for="password">
+            Password
+            <br/>
+            <input type="password" name="user[password]">
+        </label>
+        <br/>
+        <br/>
+        <input type="Submit" value="<%= button_text %>">    
+        <%= render 'shared/errors', user: @user %>
+    </form>

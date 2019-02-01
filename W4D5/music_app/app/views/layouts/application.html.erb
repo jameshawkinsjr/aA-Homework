@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MusicApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+<style>
+  html {
+    background: url(/assets/<%= rand(12)+1 %>.jpeg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font: 1em Verdana,Arial,sans-serif;
+  }
+</style>
+  <header>
+      <section id="logo">
+        <a href="/bands">MyMusic</a>
+      </section>
+      <section id="nav">
+          <a href="<%= bands_url %>">See All Bands</a>
+          <% if logged_in? %>
+          <a href="<%= new_band_url %>" >Add a band!</a>
+          <strong><a href="<%= user_url(current_user) %>"><%= current_user.email %></strong></a>
+          <% else %>
+            <a href="<%= new_user_url %>">Sign up!</a>
+            <a href="<%= new_session_url %>">Sign In!</a>
+          <% end %>
+        </section>
+  </header>
+
+
+  <body>
+        <br/>
+        <br/>
+    <%= yield %>
+  </body>
+</html>

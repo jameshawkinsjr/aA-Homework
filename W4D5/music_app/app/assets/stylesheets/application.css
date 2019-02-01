@@ -1,0 +1,100 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ 
+header {
+      background-color: darkgray;
+      padding: 10px 10px 10px 0;
+      opacity: .8;
+      display: flex;
+      
+}
+a {
+    text-decoration: none;
+    color: #f2f2f2;
+    opacity: 1;
+}
+
+#nav a {  
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 17px;
+    opacity: 1;
+  }
+
+#nav {
+    display: block;
+    float: left;
+    background-color: darkgray;
+    opacity: .9;
+    padding: 20px 50px;
+  }
+a:hover {
+    background-color: #ddd;
+    opacity: .8;
+    color: black;
+}
+
+#errors {
+     color: darkred;
+}
+
+#logo a {
+    color:white;
+    float: left;
+    font: 3em Verdana,Arial,sans-serif;
+    margin: 0 20px;
+}
+#logo a:hover {
+    color:white;
+    
+    float: left;
+    font: 3em Verdana,Arial,sans-serif;
+    margin: 0 20px;
+}
+#subtitle {
+    color:white;
+    float: right;
+    font: .8em Verdana,Arial,sans-serif;
+    align-self: center;
+}
+ body {
+    background-size: 100%;
+    text-align: center;
+    color: white;
+ }
+
+ h1, h3 {
+     background: darkgray;
+     opacity: .9;
+     display: inline-block;
+     padding: 20px;
+     border-radius: 10px;
+ }
+
+ h1, h3  a:hover {
+    color: black;
+    background: darkgray;
+ }
+ #login {
+     display: inline-block;
+     background-color: darkgray;
+     opacity: .8;
+     padding: 15px 80px;
+     border-radius: 10px;
+     color: black
+ }
