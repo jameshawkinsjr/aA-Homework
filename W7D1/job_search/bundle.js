@@ -168,13 +168,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 
 
@@ -190,8 +190,8 @@ function (_React$Component) {
 
     _classCallCheck(this, Widget);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(Widget).call(this, props)); // this.forceUpdate = this.forceUpdate.bind(this);
-    // require this component to re-render whenever the store's state changes
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Widget).call(this, props));
+    _this.forceUpdate = _this.forceUpdate.bind(_assertThisInitialized(_assertThisInitialized(_this))); // require this component to re-render whenever the store's state changes
 
     _this.props.store.subscribe(_this.forceUpdate);
 
@@ -205,14 +205,15 @@ function (_React$Component) {
     value: function fetchJobListings(city) {
       $.ajax({
         crossDomain: true,
-        dataType: 'jsonp',
+        dataType: 'json',
         url: "https://jobs.github.com/positions.json?location=".concat(city, "&markdown=true"),
         type: "GET",
         success: function (resp) {
           // tell the store to update with the new location and jobs;
           // use the action creator 'selectLocation' to build the object to
           // be dispatched
-          this.props.store.dispatch(this.selectLocation(city, resp));
+          // this.props.store.dispatch(this.selectLocation(city, resp));
+          console.log("Success");
         }.bind(this)
       });
     }

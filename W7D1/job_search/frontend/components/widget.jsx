@@ -6,7 +6,7 @@ class Widget extends React.Component {
 
   constructor(props) {
     super(props);
-    // this.forceUpdate = this.forceUpdate.bind(this);
+    this.forceUpdate = this.forceUpdate.bind(this);
 
     // require this component to re-render whenever the store's state changes
     this.props.store.subscribe(this.forceUpdate);
@@ -17,21 +17,21 @@ class Widget extends React.Component {
   fetchJobListings(city) {
     $.ajax({
       crossDomain: true,
-      dataType: 'jsonp',
+      dataType: 'json',
       url: `https://jobs.github.com/positions.json?location=${city}&markdown=true`,
       type: "GET",
       success: function(resp) {
         // tell the store to update with the new location and jobs;
         // use the action creator 'selectLocation' to build the object to
         // be dispatched
-        this.props.store.dispatch(this.selectLocation(city, resp));
+        // this.props.store.dispatch(this.selectLocation(city, resp));
+        console.log("Success");
 
       }.bind(this)
     });
   }
-
+  
   render() {
-
     // get the store's current state and deconstruct it into 'jobs'
     // and 'city' variables
     const { city, jobs } = this.props.store.getState();
