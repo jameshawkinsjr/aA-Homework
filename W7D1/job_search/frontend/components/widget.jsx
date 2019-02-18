@@ -11,7 +11,7 @@ class Widget extends React.Component {
     // require this component to re-render whenever the store's state changes
     this.props.store.subscribe(this.forceUpdate);
     this.cities = ["San Francisco", "Seattle", "New York", "Austin", "Remote"];
-    // this.selectLocation = selectLocation.bind(this);
+    this.selectLocation = selectLocation.bind(this);
   }
 
   fetchJobListings(city) {
@@ -24,7 +24,7 @@ class Widget extends React.Component {
         // tell the store to update with the new location and jobs;
         // use the action creator 'selectLocation' to build the object to
         // be dispatched
-        this.props.store.dispatch(this.selectLocation(city, resp))
+        this.props.store.dispatch(this.selectLocation(city, resp));
 
       }.bind(this)
     });
