@@ -1,11 +1,2 @@
-W7D2/middleware/node_modules
-W7D2/middleware/bundle.js
-W7D2/middleware/bundle.js.map
-W7D1/job_search/node_modules/
-W7D1/job_search/bundle.js
-W7D1/job_search/bundle.js.map
-W6D5/react-calculator/bundle.js
-W6D5/react-calculator/bundle.js.map
-W7D3/giphy/node_modules
-W7D3/giphy/bundle.js
-W7D3/giphy/bundle.js.map
+node_modules/
+bundle.js*
